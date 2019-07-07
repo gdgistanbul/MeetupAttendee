@@ -8,10 +8,8 @@ import com.gdgistanbul.model.Event
 import com.gdgistanbul.repo.MeetupRepo
 import kotlinx.coroutines.launch
 
-class MeetupViewModel(val meetupRepo: MeetupRepo) : ViewModel() {
-    init {
-        refreshEvents()
-    }
+class MeetupViewModel(private val meetupRepo: MeetupRepo) : ViewModel() {
+
 
     val eventsLiveData = MutableLiveData<List<Event>>()
     val toastLiveData = MutableLiveData<String>()

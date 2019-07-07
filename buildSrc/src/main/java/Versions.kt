@@ -5,6 +5,7 @@ object Release {
 
 object Versions {
 
+    const val mockKversion = "1.9.3"
     /**
      * Sdk Versions
      */
@@ -17,6 +18,7 @@ object Versions {
      */
     const val gradleVersion = "3.5.0-beta05"
     const val kotlinVersion = "1.3.41"
+    const val coroutinesVersion = "1.3.0-M2"
     const val appCompatVersion = "1.0.2"
     const val firebaseVersion = "17.0.0"
     const val constraintLayoutVersion = "1.1.3"

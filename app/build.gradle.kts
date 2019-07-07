@@ -43,4 +43,4 @@ dependencies {
     androidTestImplementation(TestLibraries.espressoCore)
 }
 
-apply(mapOf("plugin" to "com.google.gms.google-services"))
+//apply(mapOf("plugin" to "com.google.gms.google-services"))

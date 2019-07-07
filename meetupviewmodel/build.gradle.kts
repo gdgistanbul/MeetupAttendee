@@ -10,6 +10,10 @@ dependencies {
     implementation(AndroidxLibraries.viewModel)
     implementation(CoreLibraries.koin)
     implementation(CoreLibraries.koinViewModel)
+    testImplementation(TestLibraries.mockk)
+    testImplementation(TestLibraries.jUnit)
+    testImplementation(TestLibraries.archCoreTesting)
+    testImplementation(TestLibraries.coroutinesTesting)
 }
 
 android {
@@ -17,6 +21,9 @@ android {
     defaultConfig {
         minSdkVersion(Versions.minSdkVersion)
         targetSdkVersion(Versions.targetSdkVersion)
+    }
+    testOptions {
+        unitTests.isReturnDefaultValues = true
     }
 }
 buildscript {

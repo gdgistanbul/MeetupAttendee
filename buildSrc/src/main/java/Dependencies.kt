@@ -1,10 +1,11 @@
 object CoreLibraries {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
-    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-M2"
+
+    const val coroutines =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
     const val koin = "org.koin:koin-android:${Versions.coinVersion}"
     const val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.coinVersion}"
 }
-
 
 
 object ThirdPartyLibraries {
@@ -35,4 +36,9 @@ object TestLibraries {
     const val runnner = "com.android.support.test:runner:${Versions.testRunnerVersion}"
     const val espressoCore =
         "com.android.support.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
+    const val mockk = "io.mockk:mockk:${Versions.mockKversion}"
+
+    const val archCoreTesting = "android.arch.core:core-testing:1.0.0"
+    const val coroutinesTesting =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}"
 }
