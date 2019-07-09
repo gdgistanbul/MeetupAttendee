@@ -10,7 +10,7 @@ object Versions {
      * Sdk Versions
      */
     val compileSdkVersion = 28
-    val minSdkVersion = 17
+    val minSdkVersion = 23
     val targetSdkVersion = 28
 
     /**
