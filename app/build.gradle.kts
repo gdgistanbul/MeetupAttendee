@@ -2,12 +2,13 @@ plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
     id(Plugins.kotlinAndroidExtensions)
+    id(Plugins.navigationSafeArgs)
 }
 
 android {
     compileSdkVersion(Versions.compileSdkVersion)
     defaultConfig {
-        applicationId = Config.applicatiınId
+        applicationId = Config.applicationId
         minSdkVersion(Versions.minSdkVersion)
         targetSdkVersion(Versions.targetSdkVersion)
         versionCode = Release.versionCode
@@ -35,6 +36,10 @@ dependencies {
     implementation(CoreLibraries.koin)
     implementation(CoreLibraries.koinViewModel)
 
+    // Navigation
+    implementation(AndroidxLibraries.navigationUI)
+    implementation(AndroidxLibraries.navigationFragment)
+
     // Testing
     testImplementation(TestLibraries.jUnit)
     androidTestImplementation(TestLibraries.runnner)
@@ -42,3 +47,4 @@ dependencies {
 }
 
 //apply(mapOf("plugin" to "com.google.gms.google-services"))
+

@@ -2,26 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/main"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".ui.main.MainFragment">
-
-	<Button
-		android:id="@+id/buttonSignInWithMeetup"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Meetup ile giriş yap"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/message" />
+	tools:context=".ui.user_list.UserListFragment">
 
 	<TextView
-		android:id="@+id/message"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="MainFragment"
+		android:text="User List Fragment"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"

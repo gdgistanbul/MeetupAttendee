@@ -24,6 +24,10 @@ object AndroidxLibraries {
         "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
     const val viewModel =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleVersion}"
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
+    const val navigationUI =
+        "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
 }
 
 object FirebaseLibraries {
