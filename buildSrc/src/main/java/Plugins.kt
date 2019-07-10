@@ -6,4 +6,5 @@ object Plugins {
     val javaLibrary = "java-library"
     val kotlin= "kotlin"
     val kapt = "kotlin-kapt"
+    val navigationSafeArgs = "androidx.navigation.safeargs"
 }

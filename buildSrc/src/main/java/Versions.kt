@@ -28,4 +28,5 @@ object Versions {
     const val espressoCoreVersion = "3.0.2"
     const val coinVersion = "2.0.1"
     const val moshiVersion = "1.8.0"
+    const val navigationVersion = "2.0.0"
 }
