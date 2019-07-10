@@ -9,7 +9,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 val meetupApiModule = module {
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.meetup.com/2/")
+            .baseUrl("https://api.meetup.com/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
 
