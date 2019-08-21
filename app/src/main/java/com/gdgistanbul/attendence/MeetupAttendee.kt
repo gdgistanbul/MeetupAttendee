@@ -3,6 +3,7 @@ package com.gdgistanbul.attendence
 import android.app.Application
 import com.gdgistanbul.di.meetupApiModule
 import com.gdgistanbul.di.meetupRepoModule
+import com.gdgistanbul.di.meetupSecureModule
 import com.gdgistanbul.di.meetupViewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -18,7 +19,7 @@ class MeetupAttendee : Application() {
             // declare modules
             modules(
                 listOf(
-                    meetupRepoModule, meetupApiModule, meetupViewModelModule
+                    meetupRepoModule, meetupApiModule, meetupViewModelModule, meetupSecureModule
                 )
             )
         }
