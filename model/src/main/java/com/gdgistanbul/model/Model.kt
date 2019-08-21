@@ -114,3 +114,15 @@ data class Photo(
     @Json(name = "base_url")
     val baseUrl: String?
 )
+
+@JsonClass(generateAdapter = true)
+data class Login(
+    @Json(name = "access_token")
+    val accessToken: String?,
+    @Json(name = "refresh_token")
+    val refreshToken: String?,
+    @Json(name = "token_type")
+    val tokenType: String?,
+    @Json(name = "expires_in")
+    val expiresIn: Int?
+)
