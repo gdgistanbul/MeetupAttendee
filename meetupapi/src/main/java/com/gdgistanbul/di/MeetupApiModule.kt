@@ -6,13 +6,13 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-const val baseUrlApi = "https://api.meetup.com/"
-const val baseUrlSecure = "https://secure.meetup.com/"
+const val BASE_URL_API = "https://api.meetup.com/"
+const val BASE_URL_SECURE = "https://secure.meetup.com/"
 
 val meetupApiModule = module {
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl(baseUrlApi)
+            .baseUrl(BASE_URL_API)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
 
@@ -23,7 +23,7 @@ val meetupApiModule = module {
 val meetupSecureModule = module {
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl(baseUrlSecure)
+            .baseUrl(BASE_URL_SECURE)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
 
