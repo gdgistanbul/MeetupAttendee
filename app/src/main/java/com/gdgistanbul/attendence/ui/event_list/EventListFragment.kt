@@ -23,7 +23,7 @@ class EventListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharedPref = activity?.getSharedPreferences("attendence", Context.MODE_PRIVATE)
+        val sharedPref = activity?.getSharedPreferences("attendance", Context.MODE_PRIVATE)
         val accessToken = sharedPref?.getString("accesstoken", null)
 
         if (accessToken.isNullOrEmpty()) {

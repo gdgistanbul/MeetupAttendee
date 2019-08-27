@@ -50,7 +50,7 @@ class LoginFragment : Fragment() {
 
     private fun getAccessToken() {
         viewModel.accessTokenLiveData.observe(this, Observer { login ->
-            val sharedPref = activity?.getSharedPreferences("attendence", Context.MODE_PRIVATE)
+            val sharedPref = activity?.getSharedPreferences("attendance", Context.MODE_PRIVATE)
             val editor = sharedPref?.edit()
             editor?.putString("accesstoken", login.accessToken)
             editor?.commit()
