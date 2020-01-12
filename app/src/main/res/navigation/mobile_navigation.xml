@@ -3,13 +3,16 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/mobile_navigation"
-	app:startDestination="@id/mainFragment">
+	app:startDestination="@id/eventListFragment">
 
 	<fragment
 		android:id="@+id/eventListFragment"
 		android:name="com.gdgistanbul.attendence.ui.event_list.EventListFragment"
 		android:label="fragment_event_list"
 		tools:layout="@layout/fragment_event_list">
+		<action
+			android:id="@+id/action_eventListFragment_to_mainFragment"
+			app:destination="@id/mainFragment" />
 		<action
 			android:id="@+id/action_eventListFragment_to_userListFragment"
 			app:destination="@id/userListFragment" />
@@ -29,7 +32,17 @@
 		android:label="main_fragment"
 		tools:layout="@layout/main_fragment">
 		<action
-			android:id="@+id/action_mainFragment_to_eventListFragment"
+			android:id="@+id/action_mainFragment_to_loginFragment"
+			app:destination="@id/loginFragment" />
+	</fragment>
+
+	<fragment
+		android:id="@+id/loginFragment"
+		android:name="com.gdgistanbul.attendence.ui.login.LoginFragment"
+		android:label="fragment_login"
+		tools:layout="@layout/fragment_login">
+		<action
+			android:id="@+id/action_loginFragment_to_eventListFragment"
 			app:destination="@id/eventListFragment" />
 	</fragment>
 </navigation>

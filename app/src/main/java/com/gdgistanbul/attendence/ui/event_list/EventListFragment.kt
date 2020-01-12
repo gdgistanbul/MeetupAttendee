@@ -22,10 +22,13 @@ class EventListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        findNavController().navigate(R.id.action_eventListFragment_to_mainFragment)
+
         buttonNavigateUserList.setOnClickListener {
             // TODO - EventID Will replace with returning eventID from MeetupAPI
             val eventID = (0..99999999).random()
-            val action = EventListFragmentDirections.actionEventListFragmentToUserListFragment(eventID)
+            val action =
+                EventListFragmentDirections.actionEventListFragmentToUserListFragment(eventID)
             findNavController().navigate(action)
         }
     }

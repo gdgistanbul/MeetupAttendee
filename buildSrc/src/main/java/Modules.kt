@@ -1,7 +1,7 @@
 object Modules {
-    val app = ":app"
-    val meetupApi = ":meetupapi"
-    val meetupRepo = ":meetuprepo"
-    val meetupViewModel = ":meetupviewmodel"
-    val model = ":model"
+    const val app = ":app"
+    const val meetupApi = ":meetupapi"
+    const val meetupRepo = ":meetuprepo"
+    const val meetupViewModel = ":meetupviewmodel"
+    const val model = ":model"
 }

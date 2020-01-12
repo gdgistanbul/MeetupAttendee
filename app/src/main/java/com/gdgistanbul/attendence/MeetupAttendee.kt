@@ -18,7 +18,7 @@ class MeetupAttendee : Application() {
             // declare modules
             modules(
                 listOf(
-                    meetupRepoModule, meetupApiModule, meetupViewModelModule
+                    meetupApiModule, meetupRepoModule, meetupViewModelModule
                 )
             )
         }

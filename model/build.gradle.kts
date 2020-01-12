@@ -1,12 +1,11 @@
 plugins {
-    id(Plugins.javaLibrary)
-    id(Plugins.kotlin)
-    id(Plugins.kapt)
+    kotlin(Plugins.jvm)
+    kotlin(Plugins.kapt)
 }
 dependencies {
     implementation(CoreLibraries.kotlin)
     implementation(ThirdPartyLibraries.moshi)
-    kapt(ThirdPartyLibraries.moshiapt)
+    "kapt"(ThirdPartyLibraries.moshiapt)
 }
 
 buildscript {

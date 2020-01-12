@@ -22,7 +22,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonSignInWithMeetup.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_eventListFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_loginFragment)
         }
     }
 }

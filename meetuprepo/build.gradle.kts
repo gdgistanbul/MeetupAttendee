@@ -1,7 +1,7 @@
 plugins {
     id(Plugins.androidLibrary)
-    id(Plugins.kotlinAndroid)
-    id(Plugins.kotlinAndroidExtensions)
+    kotlin(Plugins.kotlinAndroid)
+    kotlin(Plugins.kotlinAndroidExtensions)
 }
 
 android {
@@ -16,8 +16,10 @@ dependencies {
     api(CoreLibraries.coroutines)
     api(project(Modules.meetupApi))
     implementation(FirebaseLibraries.core)
+    implementation(ThirdPartyLibraries.moshi)
     implementation(FirebaseLibraries.database)
     implementation(CoreLibraries.koin)
+    implementation(AndroidxLibraries.security)
 }
 
 buildscript {

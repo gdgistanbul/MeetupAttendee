@@ -11,17 +11,17 @@ interface MeetupApi {
 
     @GET("{url_name}/events/{id}/attendance")
     suspend fun getAttendees(
-        @Path("url_name") urlName: String = "GDGIstanbul",
         @Path("id") id: String,
+        @Path("url_name") urlName: String = "GDGIstanbul",
         @Query("order") order: String = "name"
     ): List<Attendance>
 
 
     @POST("{url_name}/events/{id}/attendance")
     suspend fun getAttendenceTaking(
-        @Path("url_name") urlName: String = "GDGIstanbul",
-        @Path("id") id: String,
         @Field("member") memberId: String,
-        @Field("status") status: String
+        @Field("status") status: String,
+        @Path("id") id: String,
+        @Path("url_name") urlName: String = "GDGIstanbul"
     )
 }

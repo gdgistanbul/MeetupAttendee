@@ -1,10 +1,12 @@
 object Plugins {
-    val androidApplication = "com.android.application"
-    val androidLibrary = "com.android.library"
-    val kotlinAndroid = "kotlin-android"
-    val kotlinAndroidExtensions = "kotlin-android-extensions"
-    val javaLibrary = "java-library"
-    val kotlin= "kotlin"
-    val kapt = "kotlin-kapt"
-    val navigationSafeArgs = "androidx.navigation.safeargs"
+    const val androidApplication = "com.android.application"
+    const val androidLibrary = "com.android.library"
+    const val kotlinAndroid = "android"
+    const val kotlinAndroidExtensions = "android.extensions"
+    const val javaLibrary = "java-library"
+    const val kapt = "kapt"
+    const val jvm = "jvm"
+    const val navigationSafeArgs = "androidx.navigation.safeargs"
+    const val versionsPlugin = "com.github.ben-manes.versions"
+
 }
