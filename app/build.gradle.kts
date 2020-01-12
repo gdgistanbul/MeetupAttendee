@@ -1,8 +1,9 @@
 plugins {
     id(Plugins.androidApplication)
-    id(Plugins.kotlinAndroid)
-    id(Plugins.kotlinAndroidExtensions)
+    kotlin(Plugins.kotlinAndroid)
+    kotlin(Plugins.kotlinAndroidExtensions)
     id(Plugins.navigationSafeArgs)
+    id(Plugins.versionsPlugin) version Versions.versionsPluginVersion
 }
 
 android {
@@ -44,6 +45,10 @@ dependencies {
     testImplementation(TestLibraries.jUnit)
     androidTestImplementation(TestLibraries.runnner)
     androidTestImplementation(TestLibraries.espressoCore)
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
 }
 
 //apply(mapOf("plugin" to "com.google.gms.google-services"))

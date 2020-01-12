@@ -1,7 +1,6 @@
 package com.gdgistanbul.attendence.ui.event_list
 
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,12 +22,7 @@ class EventListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharedPref = activity?.getSharedPreferences("attendance", Context.MODE_PRIVATE)
-        val accessToken = sharedPref?.getString("accesstoken", null)
-
-        if (accessToken.isNullOrEmpty()) {
-            findNavController().navigate(R.id.action_eventListFragment_to_mainFragment)
-        }
+        findNavController().navigate(R.id.action_eventListFragment_to_mainFragment)
 
         buttonNavigateUserList.setOnClickListener {
             // TODO - EventID Will replace with returning eventID from MeetupAPI

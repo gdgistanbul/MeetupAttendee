@@ -28,6 +28,7 @@ object AndroidxLibraries {
         "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
     const val navigationUI =
         "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+    const val security =  "androidx.security:security-crypto:${Versions.securityVersion}"
 }
 
 object FirebaseLibraries {

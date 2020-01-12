@@ -1,17 +1,18 @@
 plugins {
     id(Plugins.androidLibrary)
-    id(Plugins.kotlinAndroid)
-    id(Plugins.kotlinAndroidExtensions)
-    id(Plugins.kapt)
+    kotlin(Plugins.kotlinAndroid)
+    kotlin(Plugins.kotlinAndroidExtensions)
+    kotlin(Plugins.kapt)
 }
 dependencies {
     implementation(CoreLibraries.kotlin)
     api(project(Modules.model))
     implementation(ThirdPartyLibraries.retrofit)
     implementation(CoreLibraries.koin)
-    kapt(ThirdPartyLibraries.moshiapt)
+    "kapt"(ThirdPartyLibraries.moshiapt)
     implementation(ThirdPartyLibraries.moshi)
     implementation(ThirdPartyLibraries.moshiConverter)
+    implementation(AndroidxLibraries.security)
 }
 android {
     compileSdkVersion(Versions.compileSdkVersion)

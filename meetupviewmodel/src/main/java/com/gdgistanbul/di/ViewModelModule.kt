@@ -9,5 +9,3 @@ val meetupViewModelModule = module {
         MeetupViewModel(get())
     }
 }
-
-val moduleList = repoModuleList + meetupViewModelModule

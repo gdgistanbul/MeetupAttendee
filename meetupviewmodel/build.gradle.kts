@@ -1,7 +1,7 @@
 plugins {
     id(Plugins.androidLibrary)
-    id(Plugins.kotlinAndroid)
-    id(Plugins.kotlinAndroidExtensions)
+    kotlin(Plugins.kotlinAndroid)
+    kotlin(Plugins.kotlinAndroidExtensions)
 }
 dependencies {
     implementation(CoreLibraries.kotlin)
