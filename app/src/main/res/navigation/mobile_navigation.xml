@@ -42,7 +42,17 @@
 		android:label="fragment_login"
 		tools:layout="@layout/fragment_login">
 		<action
-			android:id="@+id/action_loginFragment_to_eventListFragment"
+			android:id="@+id/action_loginFragment_to_loginWebViewFragment"
+			app:destination="@id/loginWebViewFragment" />
+	</fragment>
+
+	<fragment
+		android:id="@+id/loginWebViewFragment"
+		android:name="com.gdgistanbul.attendence.ui.login.LoginWebViewFragment"
+		android:label="fragment_login_web_view"
+		tools:layout="@layout/fragment_login_web_view">
+		<action
+			android:id="@+id/action_loginWebViewFragment_to_eventListFragment"
 			app:destination="@id/eventListFragment" />
 	</fragment>
 </navigation>
