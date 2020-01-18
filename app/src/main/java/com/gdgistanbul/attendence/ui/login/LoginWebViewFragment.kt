@@ -8,16 +8,29 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
+import com.gdgistanbul.api.Secrets
 import com.gdgistanbul.attendence.R
+import com.gdgistanbul.attendence.extension.navigate
+import com.gdgistanbul.attendence.extension.observe
 import com.gdgistanbul.viewmodel.MeetupViewModel
 import kotlinx.android.synthetic.main.fragment_login_web_view.*
 import org.koin.android.ext.android.inject
 
 class LoginWebViewFragment : Fragment() {
     private val viewModel: MeetupViewModel by inject()
+
+    private val authUrl = Uri.Builder()
+        .scheme("https")
+        .authority("secure.meetup.com")
+        .appendPath("oauth2")
+        .appendPath("authorize")
+        .appendQueryParameter("client_id", Secrets.MEETUP_KEY)
+        .appendQueryParameter("response_type", "code")
+        .appendQueryParameter("redirect_uri", Secrets.MEETUP_REDIRECT_URL)
+        .build()
+        .toString()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,39 +42,37 @@ class LoginWebViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.loginLiveData.observe(this, Observer { login ->
-            findNavController().navigate(R.id.action_loginWebViewFragment_to_eventListFragment)
-        })
+        observe(viewModel.loginLiveData) { navigateToEventList() }
 
-        webViewAuthorize.settings.javaScriptEnabled = true
-        webViewAuthorize.settings.loadWithOverviewMode = true
-        webViewAuthorize.settings.useWideViewPort = true
-        webViewAuthorize.loadUrl(
-            "https://secure.meetup.com/oauth2/authorize?" +
-                    "client_id=${Secrets.MEETUP_KEY}&" +
-                    "response_type=code&" +
-                    "redirect_uri=${Secrets.MEETUP_REDIRECT_URL}"
-        )
+        with(webViewAuthorize) {
+            with(settings) {
+                javaScriptEnabled = true
+                loadWithOverviewMode = true
+                useWideViewPort = true
+            }
 
-        webViewAuthorize.webViewClient = object : WebViewClient() {
-            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
-                url?.let {
-                    if (url.contains(Secrets.MEETUP_REDIRECT_URL)) {
+            loadUrl(authUrl)
+
+            webViewClient = object : WebViewClient() {
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    if (url?.contains(Secrets.MEETUP_REDIRECT_URL) == true) {
                         webViewAuthorize.stopLoading()
                         authenticate(url)
                     } else {
                         super.onPageStarted(view, url, favicon)
                     }
                 }
-
             }
         }
     }
 
-    fun authenticate(url: String) {
-        Uri.parse(url).getQueryParameter("code")?.let { code ->
+    private fun authenticate(url: String) {
+        url.toUri().getQueryParameter("code")?.let { code ->
             viewModel.authenticate(code)
-
         }
+    }
+
+    private fun navigateToEventList() {
+        navigate(LoginWebViewFragmentDirections.actionLoginWebViewFragmentToEventListFragment())
     }
 }

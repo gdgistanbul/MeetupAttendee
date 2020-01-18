@@ -2,56 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/lightGray">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/login_layout_horizontal_margin"
         android:layout_marginRight="@dimen/login_layout_horizontal_margin"
-        android:layout_marginBottom="@dimen/login_layout_vertical_margin"
-        android:background="@color/lightGray">
+        android:layout_marginBottom="@dimen/login_layout_vertical_margin">
 
-        <TextView
-            style="@style/TextView.Black.28.DarkGrayishBlue"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            style="?textAppearanceHeadline4"
+            android:textColor="?colorOnBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/meetup_attendee"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/tvInfo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".7"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvInfo"
-            style="@style/TextView.Bold.16.DarkGrayishBlue"
+            style="?textAppearanceSubtitle1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/info_text_vertical_margin"
             android:text="@string/track_your_attendees"
+            android:textColor="?colorOnBackground"
             app:layout_constraintBottom_toTopOf="@id/ivIntro"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivIntro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginBottom="@dimen/intro_image_vertical_margin"
+            android:adjustViewBounds="true"
             android:background="@drawable/introduction_image"
-            android:contentDescription="TODO"
             app:layout_constraintBottom_toTopOf="@id/btnLoginWithMeetup"
+            app:layout_constraintDimensionRatio="295:347"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfo"
+            app:layout_constraintWidth_percent=".85" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLoginWithMeetup"
-            style="@style/TextView.ExtraBold.18.White"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/selector_button_red"
             android:text="@string/login_with_meetup"
-            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.gdgistanbul.attendence.R
+import com.gdgistanbul.attendence.extension.navigate
+import com.gdgistanbul.attendence.extension.onClick
 import kotlinx.android.synthetic.main.fragment_event_list.*
 
 class EventListFragment : Fragment() {
@@ -22,14 +23,10 @@ class EventListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        findNavController().navigate(R.id.action_eventListFragment_to_mainFragment)
-
-        buttonNavigateUserList.setOnClickListener {
+        buttonNavigateUserList.onClick {
             // TODO - EventID Will replace with returning eventID from MeetupAPI
             val eventID = (0..99999999).random()
-            val action =
-                EventListFragmentDirections.actionEventListFragmentToUserListFragment(eventID)
-            findNavController().navigate(action)
+            navigate(EventListFragmentDirections.actionEventListFragmentToUserListFragment(eventID))
         }
     }
 }
