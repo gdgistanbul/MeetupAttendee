@@ -4,4 +4,6 @@ object Modules {
     const val meetupRepo = ":meetuprepo"
     const val meetupViewModel = ":meetupviewmodel"
     const val model = ":model"
+    const val extension = ":extension"
+    const val androidExtension = ":androidextension"
 }

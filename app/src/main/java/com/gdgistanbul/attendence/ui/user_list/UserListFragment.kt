@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.gdgistanbul.attendence.MainActivity
 import com.gdgistanbul.attendence.R
+import com.gdgistanbul.attendence.extension.toast
 
 class UserListFragment : Fragment() {
 
@@ -26,7 +25,7 @@ class UserListFragment : Fragment() {
 
         val eventID = args.eventID
         // TODO - Just for testing safeArgs
-        Toast.makeText((activity as MainActivity), eventID.toString(), Toast.LENGTH_SHORT).show()
+        toast(eventID.toString())
     }
 
 

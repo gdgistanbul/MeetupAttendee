@@ -23,7 +23,7 @@ object Versions {
     const val appCompatVersion = "1.1.0"
     const val firebaseVersion = "17.0.0"
     const val constraintLayoutVersion = "1.1.3"
-    const val lifecycleVersion = "2.1.0"
+    const val lifecycleVersion = "2.2.0-rc03"
     const val jUnitVersion = "4.13"
     const val testRunnerVersion = "1.0.2"
     const val espressoCoreVersion = "3.0.2"

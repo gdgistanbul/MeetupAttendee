@@ -3,19 +3,19 @@
     <!--Top level DayNight theme to be used in AndroidManifest.xml-->
     <style name="MeetupAttendee.DayNight" parent="Base.MeetupAttendee">
         <!--Material color attributes -->
-        <item name="colorPrimary">@color/crimson</item>
-        <item name="colorPrimaryVariant">@color/crimson_dark</item>
-        <item name="colorSecondary">@color/crimson</item>
-        <item name="colorSecondaryVariant">@color/crimson_dark</item>
+        <item name="colorPrimary">@color/lipstick</item>
+        <item name="colorPrimaryVariant">@color/lipstick_dark</item>
+        <item name="colorSecondary">@color/lipstick</item>
+        <item name="colorSecondaryVariant">@color/lipstick_dark</item>
 
         <item name="android:colorBackground">@android:color/white</item>
         <item name="colorSurface">@android:color/white</item>
-        <item name="colorError">@color/crimson</item>
+        <item name="colorError">@color/lipstick</item>
 
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorOnSecondary">@android:color/white</item>
-        <item name="colorOnBackground">@color/cloud_burst</item>
-        <item name="colorOnSurface">@color/cloud_burst</item>
+        <item name="colorOnBackground">@color/dusk</item>
+        <item name="colorOnSurface">@color/dusk</item>
         <item name="colorOnError">@android:color/white</item>
     </style>
 

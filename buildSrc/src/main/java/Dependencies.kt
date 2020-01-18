@@ -22,6 +22,8 @@ object AndroidxLibraries {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
     const val lifecycleExtensions =
         "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
+    const val lifecycleRuntime =
+        "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}"
     const val viewModel =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleVersion}"
     const val navigationFragment =

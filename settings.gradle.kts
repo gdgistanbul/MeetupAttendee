@@ -1,3 +1,11 @@
 rootProject.buildFileName = "build.gradle.kts"
-include(":app", ":model", ":meetupapi",  ":meetuprepo", ":meetupviewmodel")
+include(
+    ":app",
+    ":model",
+    ":meetupapi",
+    ":meetuprepo",
+    ":meetupviewmodel",
+    ":extension",
+    ":androidextension"
+)
 
