@@ -17,8 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
+
     - name: Run a multi-line script
       run: |
         echo "package com.gdgistanbul.api\n \
@@ -28,6 +27,8 @@ jobs:
           const val MEETUP_SECRET = \"\"\n \
           const val MEETUP_REDIRECT_URL = \"\"\n" \
         }\ >> meetupapi/src/main/java/com/gdgistanbul/api/Secrets.kt
-    - name: setup-android
-      uses: msfjarvis/setup-android@0.2
+    - name: print Secrets.kt
+      run: tail meetupapi/src/main/java/com/gdgistanbul/api/Secrets.kt
+#     - name: setup-android
+#       uses: msfjarvis/setup-android@0.2
 
