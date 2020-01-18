@@ -6,7 +6,7 @@
 	android:layout_height="match_parent"
 	tools:context=".ui.user_list.UserListFragment">
 
-	<TextView
+    <com.google.android.material.textview.MaterialTextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="User List Fragment"
