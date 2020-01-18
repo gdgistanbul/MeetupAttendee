@@ -3,29 +3,31 @@
     <!--Components-->
 
     <!--Bottom Sheets-->
-    <style name="ThemeOverlay.MyTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+    <style name="ThemeOverlay.MeetupAttendee.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowAnimationStyle">@style/Animation.MyTheme.BottomSheet.Modal</item>
+        <item name="android:windowAnimationStyle">
+            @style/Animation.MeetupAttendee.BottomSheet.Modal
+        </item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="bottomSheetStyle">@style/Widget.MyTheme.BottomSheet.Modal</item>
+        <item name="bottomSheetStyle">@style/Widget.MeetupAttendee.BottomSheet.Modal</item>
         <item name="android:navigationBarColor">?colorSurface</item>
         <item name="android:navigationBarDividerColor" tools:ignore="NewApi">
             @android:color/transparent
         </item>
     </style>
 
-    <style name="Widget.MyTheme.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+    <style name="Widget.MeetupAttendee.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="shapeAppearanceOverlay">?shapeAppearanceLargeComponent</item>
     </style>
 
     <!--Navigation Drawer-->
-    <style name="Widget.MyTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+    <style name="Widget.MeetupAttendee.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
     </style>
 
     <!--Button-->
-    <style name="Widget.MyTheme.Button" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.MeetupAttendee.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:padding">@dimen/button_padding</item>
     </style>
 

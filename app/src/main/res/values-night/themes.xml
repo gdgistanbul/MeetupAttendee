@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--Top level DayNight theme to be used in AndroidManifest.xml-->
-    <style name="MyTheme.DayNight" parent="Base.MyTheme">
+    <style name="MeetupAttendee.DayNight" parent="Base.MeetupAttendee">
         <!--Material color attributes -->
         <item name="colorPrimary">@color/crimson_light</item>
         <item name="colorPrimaryVariant">@color/crimson</item>
