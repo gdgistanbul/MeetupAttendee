@@ -29,4 +29,6 @@
     <!--Button-->
     <style name="Widget.MeetupAttendee.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:padding">@dimen/button_padding</item>
+    </style>
+    
 </resources>
