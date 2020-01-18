@@ -31,4 +31,5 @@ object Versions {
     const val moshiVersion = "1.8.0"
     const val navigationVersion = "2.1.0"
     const val versionsPluginVersion ="0.27.0"
+    const val materialVersion = "1.2.0-alpha03"
 }

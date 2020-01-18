@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Top level DayNight theme to be used in AndroidManifest.xml-->
+    <style name="MeetupAttendee.DayNight" parent="Base.MeetupAttendee">
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/crimson</item>
+        <item name="colorPrimaryVariant">@color/crimson_dark</item>
+        <item name="colorSecondary">@color/crimson</item>
+        <item name="colorSecondaryVariant">@color/crimson_dark</item>
+
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorError">@color/crimson</item>
+
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorOnBackground">@color/cloud_burst</item>
+        <item name="colorOnSurface">@color/cloud_burst</item>
+        <item name="colorOnError">@android:color/white</item>
+    </style>
+
+    <!--Base custom theme which will be shared between both light and dark theme variants-->
+    <style name="Base.MeetupAttendee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.MeetupAttendee.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MeetupAttendee.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MeetupAttendee.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MeetupAttendee.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MeetupAttendee.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MeetupAttendee.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MeetupAttendee.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MeetupAttendee.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MeetupAttendee.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MeetupAttendee.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MeetupAttendee.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MeetupAttendee.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MeetupAttendee.Overline</item>
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">
+            @style/ShapeAppearance.MeetupAttendee.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">
+            @style/ShapeAppearance.MeetupAttendee.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">
+            @style/ShapeAppearance.MeetupAttendee.LargeComponent
+        </item>
+
+        <!--Component styles-->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert
+        </item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.MeetupAttendee.BottomSheetDialog
+        </item>
+        <item name="navigationViewStyle">@style/Widget.MeetupAttendee.NavigationView</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+        <item name="materialButtonStyle">@style/Widget.MeetupAttendee.Button</item>
+
+        <!--Status & Navigation Bar styles-->
+        <item name="android:statusBarColor">?colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">
+            ?colorControlHighlight
+        </item>
+
+        <!--Font attributes-->
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
+        <item name="colorAccent">?colorSecondary</item>
+    </style>
+
+</resources>

@@ -33,6 +33,7 @@ dependencies {
     implementation(AndroidxLibraries.core)
     implementation(AndroidxLibraries.constraintLayout)
     implementation(AndroidxLibraries.lifecycleExtensions)
+    implementation(AndroidxLibraries.material)
     implementation(project(Modules.meetupViewModel))
     implementation(CoreLibraries.koin)
     implementation(CoreLibraries.koinViewModel)

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="crimson">#e51937</color>
+    <color name="crimson_light">#ff5c61</color>
+    <color name="crimson_dark">#ab0011</color>
+    <color name="cloud_burst">#262e52</color>
+    <color name="lynch">#60688a</color>
 </resources>

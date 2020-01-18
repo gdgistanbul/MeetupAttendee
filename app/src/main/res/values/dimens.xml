@@ -1,0 +1,16 @@
+<resources>
+
+    <!--Emphasis modifiers for "on" colors-->
+    <dimen name="alpha_emphasis_high">@dimen/material_emphasis_high_type</dimen>
+    <dimen name="alpha_emphasis_medium">@dimen/material_emphasis_medium</dimen>
+    <dimen name="alpha_emphasis_disabled">@dimen/material_emphasis_disabled</dimen>
+
+    <!--Shape Appearance-->
+    <dimen name="small_component_corner_size">10dp</dimen>
+    <dimen name="medium_component_corner_size">10dp</dimen>
+    <dimen name="large_component_corner_size">10dp</dimen>
+
+    <!--Components-->
+    <dimen name="button_padding">16dp</dimen>
+
+</resources>
