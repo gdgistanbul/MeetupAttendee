@@ -14,4 +14,15 @@
     <!--Components-->
     <dimen name="button_padding">16dp</dimen>
 
+    <dimen name="size_text_small">12sp</dimen>
+    <dimen name="size_text_regular">14sp</dimen>
+    <dimen name="size_text_medium">16sp</dimen>
+    <dimen name="size_text_large">18sp</dimen>
+    <dimen name="size_text_xlarge">28sp</dimen>
+
+    <dimen name="login_layout_horizontal_margin">16dp</dimen>
+    <dimen name="login_layout_vertical_margin">24dp</dimen>
+    <dimen name="intro_image_vertical_margin">32dp</dimen>
+    <dimen name="info_text_vertical_margin">32dp</dimen>
+
 </resources>
