@@ -8,9 +8,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/margin_16"
-        android:layout_marginRight="@dimen/margin_16"
-        android:layout_marginBottom="@dimen/margin_24"
+        android:layout_marginLeft="@dimen/login_layout_horizontal_margin"
+        android:layout_marginRight="@dimen/login_layout_horizontal_margin"
+        android:layout_marginBottom="@dimen/login_layout_vertical_margin"
         android:background="@color/lightGray">
 
         <TextView
@@ -27,7 +27,7 @@
             style="@style/TextView.Bold.16.DarkGrayishBlue"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/info_text_vertical_margin"
             android:text="@string/track_your_attendees"
             app:layout_constraintBottom_toTopOf="@id/ivIntro"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,12 +37,12 @@
             android:id="@+id/ivIntro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/intro_image_vertical_margin"
             android:background="@drawable/introduction_image"
+            android:contentDescription="TODO"
             app:layout_constraintBottom_toTopOf="@id/btnLoginWithMeetup"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="TODO" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/btnLoginWithMeetup"

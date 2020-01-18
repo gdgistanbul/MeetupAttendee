@@ -7,7 +7,7 @@
     </style>
 
     <style name="TextView.Black.28">
-        <item name="android:textSize">@dimen/text_size_28</item>
+        <item name="android:textSize">@dimen/size_text_xlarge</item>
     </style>
 
     <style name="TextView.Black.28.DarkGrayishBlue">
@@ -19,7 +19,7 @@
     </style>
 
     <style name="TextView.Bold.12">
-        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textSize">@dimen/size_text_small</item>
     </style>
 
     <style name="TextView.Bold.12.ColorPrimary">
@@ -27,7 +27,7 @@
     </style>
 
     <style name="TextView.Bold.14">
-        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textSize">@dimen/size_text_regular</item>
     </style>
 
     <style name="TextView.Bold.14.DarkDesaturatedBlue">
@@ -39,7 +39,7 @@
     </style>
 
     <style name="TextView.Bold.16">
-        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textSize">@dimen/size_text_medium</item>
     </style>
 
     <style name="TextView.Bold.16.DarkGrayishBlue">
@@ -55,7 +55,7 @@
     </style>
 
     <style name="TextView.ExtraBold.14">
-        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textSize">@dimen/size_text_regular</item>
     </style>
 
     <style name="TextView.ExtraBold.14.ColorPrimary">
@@ -67,7 +67,7 @@
     </style>
 
     <style name="TextView.ExtraBold.16">
-        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textSize">@dimen/size_text_medium</item>
     </style>
 
     <style name="TextView.ExtraBold.16.DarkDesaturatedBlue">
@@ -79,7 +79,7 @@
     </style>
 
     <style name="TextView.ExtraBold.18">
-        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textSize">@dimen/size_text_large</item>
     </style>
 
     <style name="TextView.ExtraBold.18.White">
@@ -91,7 +91,7 @@
     </style>
 
     <style name="TextView.Regular.12">
-        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textSize">@dimen/size_text_small</item>
     </style>
 
     <style name="TextView.Regular.12.DesaturatedDarkBlue">
@@ -99,7 +99,7 @@
     </style>
 
     <style name="TextView.Regular.14">
-        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textSize">@dimen/size_text_regular</item>
     </style>
 
     <style name="TextView.Regular.14.DesaturatedDarkBlue">
@@ -111,7 +111,7 @@
     </style>
 
     <style name="TextView.SemiBold.12">
-        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textSize">@dimen/size_text_small</item>
     </style>
 
     <style name="TextView.SemiBold.12.DesaturatedDarkBlue">
