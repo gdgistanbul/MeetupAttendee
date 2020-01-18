@@ -31,7 +31,7 @@ jobs:
           
           const val MEETUP_REDIRECT_URL = \"\"" \
           
-        }\ >> meetupapi/src/main/java/com/gdgistanbul/api/Secrets.kt
+        } >> meetupapi/src/main/java/com/gdgistanbul/api/Secrets.kt
     - name: print Secrets.kt
       run: tail meetupapi/src/main/java/com/gdgistanbul/api/Secrets.kt
 #     - name: setup-android
