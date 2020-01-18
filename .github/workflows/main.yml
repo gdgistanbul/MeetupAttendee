@@ -21,8 +21,13 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        echo "package com.gdgistanbul.api\n \
+
+        object Secrets {\n \
+          const val MEETUP_KEY = \"\"\n \
+          const val MEETUP_SECRET = \"\"\n \
+          const val MEETUP_REDIRECT_URL = \"\"\n" \
+        }\ >> meetupapi/src/main/java/com/gdgistanbul/api/Secrets.kt
     - name: setup-android
       uses: msfjarvis/setup-android@0.2
 
