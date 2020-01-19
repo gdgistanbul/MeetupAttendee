@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.gdgistanbul.attendence.R
 import com.gdgistanbul.attendence.extension.navigate
 import com.gdgistanbul.attendence.extension.onClick
+import com.gdgistanbul.model.Event
 import kotlinx.android.synthetic.main.fragment_event_list.*
 
 class EventListFragment : Fragment() {
@@ -28,5 +29,8 @@ class EventListFragment : Fragment() {
             val eventID = (0..99999999).random()
             navigate(EventListFragmentDirections.actionEventListFragmentToUserListFragment(eventID))
         }
+
+//        val event:Event = Event()
+//        navigate(EventListFragmentDirections.actionEventListFragmentToEventDetailFragment(event))
     }
 }

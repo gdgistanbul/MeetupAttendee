@@ -47,6 +47,9 @@ dependencies {
     testImplementation(TestLibraries.jUnit)
     androidTestImplementation(TestLibraries.runnner)
     androidTestImplementation(TestLibraries.espressoCore)
+
+    //Third Party Libraries
+    implementation(ThirdPartyLibraries.glide)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

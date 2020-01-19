@@ -24,4 +24,10 @@ interface MeetupApi {
         @Path("id") id: String,
         @Path("url_name") urlName: String = "GDGIstanbul"
     )
+
+    @GET("{url_name}/events/{id}")
+    suspend fun getEvent(
+        @Path("id") id: String,
+        @Path("url_name") urlName: String = "GDGIstanbul"
+    ): Event
 }

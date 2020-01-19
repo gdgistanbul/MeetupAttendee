@@ -27,4 +27,6 @@ class MeetupRepo(
         )
         sharedPreferences.edit().putString("login", moshi.loginAdapter().toJson(login)).apply()
     }
+
+    suspend fun getEvent(id: String): Event = meetupApi.getEvent(id)
 }

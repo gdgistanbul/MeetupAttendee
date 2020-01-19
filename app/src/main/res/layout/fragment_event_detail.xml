@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnBack"
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/back"
+            android:elevation="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/df18_home"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvEventInfo"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/white_three"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtEventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="GDG DevFest Istanbul 2019" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtEventDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtEventName"
+                    tools:text="24 Aug, 2pm" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtEventVenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/txtEventDate"
+                    app:layout_constraintTop_toBottomOf="@id/txtEventDate"
+                    tools:text="Kolektif House Maslak" />
+
+                <View
+                    android:id="@+id/vAttendee"
+                    android:layout_width="98dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:alpha="0.15"
+                    android:background="@drawable/bg_lipstick_4rd"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="@id/txtEventVenue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtEventDate" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtAttendee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/lipstick"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/vAttendee"
+                    app:layout_constraintEnd_toEndOf="@id/vAttendee"
+                    app:layout_constraintStart_toStartOf="@id/vAttendee"
+                    app:layout_constraintTop_toTopOf="@id/vAttendee"
+                    tools:text="190 Attendees" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:textColor="@color/white_three"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/cvEventInfo"
+            app:layout_constraintStart_toStartOf="@+id/cvEventInfo"
+            app:layout_constraintTop_toBottomOf="@id/ivImage"
+            tools:text="Start Check-In" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="Detail"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCheckIn"
+            tools:text="Details" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="62dp"
+            android:fontFamily="@font/nunito_regular"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDetailTitle"
+            tools:text="Merhabalar,\nGDG Istanbul olarak 24 Ağustos Cumartesi günü Google ve JetBrains'in desteklediği Kotlin/Everywhere etkinlik serisinin bir parçası olarak Kotlin/Everywhere Istanbul etkinliğini Kolektif House Maslak'ta gerçekleştiriyoruz. Bu etkinlikte Android, Google Cloud Platform ve Multi-platform alanlarında Kotlin temellerini ve best practise'lerini öğreneceğiz.\nEtkinlik programı konuşmacı başvuruları tamamlandıktan sonra hazırlanıp paylaşılacaktır. Eğer sizde bu etkinlikte konuşmacı olarak yer almak, Kotlin deneyimlerinizi bizlerle paylaşmak isterseniz CFP formunu hemen doldurabilirsiniz.\nCall For Paper 👉🏻 https://gdg.ist/cfp-kotlin-everywhere\nEtkinlik Programı; " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -13,6 +13,7 @@ object ThirdPartyLibraries {
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
     const val moshiapt = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
     const val moshiConverter = "com.squareup.retrofit2:converter-moshi:2.5.0"
+    const val glide = "com.github.bumptech.glide:glide:4.10.0"
 }
 
 object AndroidxLibraries {

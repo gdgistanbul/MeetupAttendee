@@ -2,7 +2,10 @@ package com.gdgistanbul.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import com.sun.xml.internal.ws.developer.Serialization
+import java.io.Serializable
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Event(
     val created: Long?,
@@ -35,6 +38,7 @@ data class Event(
     val yesRsvpCount: Int?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Venue(
     val id: Int?,
@@ -50,6 +54,7 @@ data class Venue(
     val localizedCountryName: String?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Group(
     val created: Long?,
@@ -79,6 +84,7 @@ data class Attendance(
     val attendanceId: Int?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Rsvp(
     val id: Int?,
@@ -87,6 +93,7 @@ data class Rsvp(
     val updated: Long?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Member(
     val id: Int?,
@@ -96,11 +103,13 @@ data class Member(
     val eventContext: EventContext?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class EventContext(
     val host: Boolean?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Photo(
     val id: Int?,
@@ -115,6 +124,7 @@ data class Photo(
     val baseUrl: String?
 )
 
+@Serialization
 @JsonClass(generateAdapter = true)
 data class Login(
     @Json(name = "access_token")
