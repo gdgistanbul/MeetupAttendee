@@ -2,6 +2,8 @@ package com.gdgistanbul.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import com.sun.xml.internal.ws.developer.Serialization
+import java.io.Serializable
 
 @JsonClass(generateAdapter = true)
 data class Event(

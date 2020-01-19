@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_eventListFragment_to_userListFragment"
             app:destination="@id/userListFragment" />
+        <action
+            android:id="@+id/action_eventListFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment"/>
     </fragment>
     <fragment
         android:id="@+id/userListFragment"
@@ -42,5 +45,15 @@
         <action
             android:id="@+id/action_loginWebViewFragment_to_eventListFragment"
             app:destination="@id/eventListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.gdgistanbul.attendence.ui.event_detail.EventDetailFragment"
+        android:label="fragment_event_detail"
+        tools:layout="@layout/fragment_event_detail">
+        <argument
+            android:name="eventID"
+            app:argType="string"/>
     </fragment>
 </navigation>
