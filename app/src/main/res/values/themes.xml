@@ -15,8 +15,12 @@
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorOnSecondary">@android:color/white</item>
         <item name="colorOnBackground">@color/dusk</item>
-        <item name="colorOnSurface">@color/dusk</item>
+        <item name="colorOnSurface">@color/dark_grey_blue</item>
         <item name="colorOnError">@android:color/white</item>
+
+        <!--Custom color attributes -->
+        <item name="tabLayoutUnselectedTextColor">@color/metallic_blue_alpha_50</item>
+        <item name="tabLayoutUnselectedIndicatorColor">@color/metallic_blue_alpha_15</item>
     </style>
 
     <!--Base custom theme which will be shared between both light and dark theme variants-->
@@ -55,6 +59,8 @@
         <item name="navigationViewStyle">@style/Widget.MeetupAttendee.NavigationView</item>
         <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
         <item name="materialButtonStyle">@style/Widget.MeetupAttendee.Button</item>
+        <item name="editTextStyle">@style/Widget.MeetupAttendee.EditText</item>
+        <item name="tabStyle">@style/Widget.MeetupAttendee.TabLayout</item>
 
         <!--Status & Navigation Bar styles-->
         <item name="android:statusBarColor">?colorSurface</item>

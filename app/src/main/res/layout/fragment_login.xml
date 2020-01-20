@@ -7,20 +7,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/login_layout_horizontal_margin"
-        android:layout_marginRight="@dimen/login_layout_horizontal_margin"
-        android:layout_marginBottom="@dimen/login_layout_vertical_margin">
+        android:layout_marginHorizontal="@dimen/layout_margin_medium"
+        android:layout_marginBottom="@dimen/layout_margin_large">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvTitle"
             style="?textAppearanceHeadline4"
-            android:textColor="?colorOnBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/meetup_attendee"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="?colorOnBackground"
             app:layout_constraintBottom_toTopOf="@id/tvInfo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias=".7"
             app:layout_constraintVertical_chainStyle="packed" />
@@ -30,7 +29,7 @@
             style="?textAppearanceSubtitle1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/info_text_vertical_margin"
+            android:layout_marginBottom="@dimen/layout_margin_xlarge"
             android:text="@string/track_your_attendees"
             android:textColor="?colorOnBackground"
             app:layout_constraintBottom_toTopOf="@id/ivIntro"
@@ -38,11 +37,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivIntro"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/intro_image_vertical_margin"
+            android:layout_marginBottom="@dimen/layout_margin_xlarge"
             android:adjustViewBounds="true"
             android:background="@drawable/introduction_image"
             app:layout_constraintBottom_toTopOf="@id/btnLoginWithMeetup"
