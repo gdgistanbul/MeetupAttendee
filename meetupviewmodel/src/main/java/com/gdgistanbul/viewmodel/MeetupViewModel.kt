@@ -35,7 +35,7 @@ class MeetupViewModel(private val meetupRepo: MeetupRepo) : ViewModel() {
             _loginLiveData.postValue(Event(Unit))
         } catch (e: Exception) {
             _toastLiveData.postValue(Event(e.message.toString()))
-            Log.d("meetupviewmodel", e.message, e)
+            Log.d(classTag, e.message, e)
         }
     }
 }

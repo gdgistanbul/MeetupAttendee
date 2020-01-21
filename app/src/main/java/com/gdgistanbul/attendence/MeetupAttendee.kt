@@ -1,6 +1,7 @@
 package com.gdgistanbul.attendence
 
 import android.app.Application
+import com.facebook.stetho.Stetho
 import com.gdgistanbul.di.meetupApiModule
 import com.gdgistanbul.di.meetupRepoModule
 import com.gdgistanbul.di.meetupViewModelModule
@@ -21,6 +22,10 @@ class MeetupAttendee : Application() {
                     meetupApiModule, meetupRepoModule, meetupViewModelModule
                 )
             )
+        }
+
+        if (BuildConfig.DEBUG) {
+            Stetho.initializeWithDefaults(this)
         }
     }
 }

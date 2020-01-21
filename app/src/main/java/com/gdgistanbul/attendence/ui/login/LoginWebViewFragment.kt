@@ -13,13 +13,13 @@ import androidx.fragment.app.Fragment
 import com.gdgistanbul.api.Secrets
 import com.gdgistanbul.attendence.R
 import com.gdgistanbul.attendence.extension.navigate
-import com.gdgistanbul.attendence.extension.observe
+import com.gdgistanbul.attendence.extension.observeEvent
 import com.gdgistanbul.viewmodel.MeetupViewModel
 import kotlinx.android.synthetic.main.fragment_login_web_view.*
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginWebViewFragment : Fragment() {
-    private val viewModel: MeetupViewModel by inject()
+    private val meetupViewModel by viewModel<MeetupViewModel>()
 
     private val authUrl = Uri.Builder()
         .scheme("https")
@@ -42,7 +42,7 @@ class LoginWebViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        observe(viewModel.loginLiveData) { navigateToEventList() }
+        observeEvent(meetupViewModel.loginLiveData) { navigateToEventList() }
 
         with(webViewAuthorize) {
             with(settings) {
@@ -68,7 +68,7 @@ class LoginWebViewFragment : Fragment() {
 
     private fun authenticate(url: String) {
         url.toUri().getQueryParameter("code")?.let { code ->
-            viewModel.authenticate(code)
+            meetupViewModel.authenticate(code)
         }
     }
 

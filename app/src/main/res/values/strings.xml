@@ -3,6 +3,8 @@
 	<string name="meetup_attendee">Meetup Attendee</string>
 	<string name="track_your_attendees">Easiest way to track your attendees</string>
 	<string name="login_with_meetup">Login with Meetup</string>
+    <string name="event_list_greeting_title">Hello, %s</string>
+    <string name="event_list_greeting_subtitle">Looks like a great event!</string>
 	<string name="search_events">Search Events</string>
     <string name="upcoming_events">Upcoming Events</string>
     <string name="past_events">Past Events</string>

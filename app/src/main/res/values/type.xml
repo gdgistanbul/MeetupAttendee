@@ -74,7 +74,7 @@
     </style>
 
     <style name="TextAppearance.MeetupAttendee.Body3" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">0</item>
     </style>
 

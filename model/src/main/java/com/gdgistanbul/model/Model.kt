@@ -32,8 +32,18 @@ data class Event(
     @Json(name = "waitlist_count")
     val waitlistCount: Int?,
     @Json(name = "yes_rsvp_count")
-    val yesRsvpCount: Int?
-)
+    val yesRsvpCount: Int?,
+    @Json(name = "featured_photo")
+    val featuredPhoto: Photo?
+) {
+    val localDateTime: String?
+        get() = takeIf { localDate != null && localTime != null }
+            ?.let { "$localDate $localTime" }
+
+    companion object {
+        const val LOCAL_DATE_TIME_PATTERN = "YYYY-MM-DD hh:mm"
+    }
+}
 
 @JsonClass(generateAdapter = true)
 data class Venue(
@@ -91,10 +101,24 @@ data class Rsvp(
 data class Member(
     val id: Int?,
     val name: String?,
+    val email: String?,
+    val status: String?,
+    val joined: Long?,
+    val city: String?,
+    val country: String?,
+    @Json(name = "localized_country_name")
+    val localizedCountryName: String?,
+    val lat: Double?,
+    val lon: Double?,
     val photo: Photo?,
     @Json(name = "event_context")
-    val eventContext: EventContext?
-)
+    val eventContext: EventContext?,
+    @Json(name = "is_pro_admin")
+    val isProAdmin: Boolean?
+) {
+    val firstName get() = name?.removeSuffix(lastName.toString())
+    val lastName get() = name?.split("\\s+")?.takeLast(1)?.get(0)?.takeIf { it.isNotBlank() }
+}
 
 @JsonClass(generateAdapter = true)
 data class EventContext(
@@ -104,13 +128,13 @@ data class EventContext(
 @JsonClass(generateAdapter = true)
 data class Photo(
     val id: Int?,
-    val type: String?,
     @Json(name = "highres_link")
     val highresLink: String?,
     @Json(name = "photo_link")
     val photoLink: String?,
     @Json(name = "thumb_link")
     val thumbLink: String?,
+    val type: String?,
     @Json(name = "base_url")
     val baseUrl: String?
 )

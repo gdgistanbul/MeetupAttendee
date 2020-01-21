@@ -6,14 +6,14 @@
     android:layout_height="wrap_content"
     tools:showIn="@layout/fragment_event_list">
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/avatarImageView"
         android:layout_width="@dimen/circle_avatar_size"
         android:layout_height="@dimen/circle_avatar_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.MeetupAttendee.CircleImageView" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/titleTextView"
@@ -21,22 +21,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_margin_medium"
-        android:text="Hello, Caner"
         android:textColor="?colorOnPrimary"
         app:layout_constraintBottom_toTopOf="@id/subtitleTextView"
         app:layout_constraintStart_toEndOf="@+id/avatarImageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toTopOf="@id/avatarImageView"
+        tools:text="@string/event_list_greeting_title" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/subtitleTextView"
         style="?textAppearanceSubtitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Looks like a great event!"
+        android:layout_marginBottom="@dimen/layout_margin_small"
         android:textColor="?colorOnPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/avatarImageView"
         app:layout_constraintStart_toStartOf="@+id/titleTextView"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        tools:text="@string/event_list_greeting_subtitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

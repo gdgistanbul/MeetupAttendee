@@ -25,7 +25,7 @@ class UserListFragment : Fragment() {
 
         val eventID = args.eventID
         // TODO - Just for testing safeArgs
-        toast(eventID.toString())
+        toast(eventID)
     }
 
 

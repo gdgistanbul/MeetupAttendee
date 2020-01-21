@@ -18,6 +18,8 @@
         <item name="colorOnSurface">@color/dark_grey_blue</item>
         <item name="colorOnError">@android:color/white</item>
 
+        <item name="colorOnSurfaceVariant">@color/blue_grey</item>
+
         <!--Custom color attributes -->
         <item name="tabLayoutUnselectedTextColor">@color/metallic_blue_alpha_50</item>
         <item name="tabLayoutUnselectedIndicatorColor">@color/metallic_blue_alpha_15</item>
