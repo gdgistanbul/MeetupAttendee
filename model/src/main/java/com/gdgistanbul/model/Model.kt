@@ -116,8 +116,13 @@ data class Member(
     @Json(name = "is_pro_admin")
     val isProAdmin: Boolean?
 ) {
-    val firstName get() = name?.removeSuffix(lastName.toString())
-    val lastName get() = name?.split("\\s+")?.takeLast(1)?.get(0)?.takeIf { it.isNotBlank() }
+    val firstName get() = name?.removeSuffix(lastName.toString())?.trim()
+    val lastName
+        get() = name?.split(" ")
+            ?.takeLast(1)
+            ?.get(0)
+            ?.takeIf { it.isNotBlank() }
+            ?.trim()
 }
 
 @JsonClass(generateAdapter = true)
