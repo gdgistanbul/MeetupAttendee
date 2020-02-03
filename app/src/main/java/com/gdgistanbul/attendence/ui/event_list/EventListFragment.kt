@@ -22,7 +22,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class EventListFragment : Fragment() {
     private val eventListViewModel by viewModel<EventListViewModel>()
-    private val eventAdapter = EventRecyclerAdapter(::navigateToUserList)
+    private val eventAdapter = eventListAdapter(::navigateToUserList)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

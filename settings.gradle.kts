@@ -6,6 +6,7 @@ include(
     ":meetuprepo",
     ":meetupviewmodel",
     ":extension",
-    ":androidextension"
+    ":androidextension",
+    ":recyclerviewdsl"
 )
 

@@ -17,6 +17,7 @@ object ThirdPartyLibraries {
 object AndroidxLibraries {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompatVersion}"
     const val core = "androidx.core:core-ktx:${Versions.appCompatVersion}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.appCompatVersion}"
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
     const val lifecycleExtensions =

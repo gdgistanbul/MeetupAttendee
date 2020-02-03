@@ -6,4 +6,5 @@ object Modules {
     const val model = ":model"
     const val extension = ":extension"
     const val androidExtension = ":androidextension"
+    const val recyclerViewDsl = ":recyclerviewdsl"
 }
