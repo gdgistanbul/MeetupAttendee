@@ -49,49 +49,58 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/eventNameTextView"
+        style="?textAppearanceSubtitle2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_margin_small"
         android:layout_marginEnd="@dimen/layout_margin_medium"
         android:elevation="@dimen/event_item_others_elevation"
-        android:orientation="vertical"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="?colorOnSurface"
+        app:layout_constraintBottom_toTopOf="@+id/eventDateTextView"
+        app:layout_constraintEnd_toEndOf="@id/eventInfoCardView"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/eventInfoCardView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="DevFest Istanbul 2019" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/eventDateTextView"
+        style="@style/TextAppearance.MeetupAttendee.Body3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        android:layout_marginTop="@dimen/layout_margin_xsmall"
+        android:layout_marginEnd="@dimen/layout_margin_medium"
+        android:elevation="@dimen/event_item_others_elevation"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?colorOnSurfaceVariant"
+        app:layout_constraintBottom_toTopOf="@+id/eventLocationTextView"
+        app:layout_constraintEnd_toEndOf="@id/eventInfoCardView"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/eventNameTextView"
+        tools:text="24 Nov, 9am" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/eventLocationTextView"
+        style="@style/TextAppearance.MeetupAttendee.Body3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        android:layout_marginEnd="@dimen/layout_margin_medium"
+        android:elevation="@dimen/event_item_others_elevation"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?colorOnSurfaceVariant"
         app:layout_constraintBottom_toBottomOf="@id/eventInfoCardView"
         app:layout_constraintEnd_toEndOf="@id/eventInfoCardView"
         app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="@id/eventInfoCardView">
+        app:layout_constraintTop_toBottomOf="@+id/eventDateTextView"
+        tools:text="Uniq Istanbul" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/eventNameTextView"
-            style="?textAppearanceSubtitle2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:textColor="?colorOnSurface"
-            tools:text="DevFest Istanbul 2019" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/eventDateTextView"
-            style="@style/TextAppearance.MeetupAttendee.Body3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin_xsmall"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textColor="?colorOnSurfaceVariant"
-            tools:text="24 Nov, 9am" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/eventLocationTextView"
-            style="@style/TextAppearance.MeetupAttendee.Body3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textColor="?colorOnSurfaceVariant"
-            tools:text="Uniq Istanbul" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
