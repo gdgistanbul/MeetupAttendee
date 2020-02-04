@@ -45,7 +45,6 @@ dependencies {
     implementation(AndroidxLibraries.lifecycleRuntime)
     implementation(AndroidxLibraries.material)
     implementation(project(Modules.meetupViewModel))
-    implementation(project(Modules.recyclerViewDsl))
     implementation(CoreLibraries.koin)
     implementation(CoreLibraries.koinViewModel)
 

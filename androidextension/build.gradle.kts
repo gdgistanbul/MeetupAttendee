@@ -6,6 +6,7 @@ plugins {
 
 dependencies {
     implementation(CoreLibraries.kotlin)
+    implementation(AndroidxLibraries.recyclerView)
 }
 
 android {

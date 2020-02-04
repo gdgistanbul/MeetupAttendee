@@ -4,9 +4,9 @@ import androidx.recyclerview.widget.DiffUtil
 import coil.api.load
 import com.gdgistanbul.attendence.R
 import com.gdgistanbul.attendence.extension.onClick
+import com.gdgistanbul.extension.android.listAdapter
 import com.gdgistanbul.extension.formatDateTime
 import com.gdgistanbul.model.Event
-import com.gdgistanbul.recyclerviewdsl.listAdapter
 import kotlinx.android.synthetic.main.item_event.*
 
 fun eventListAdapter(onClickEvent: (event: Event) -> Unit = {}) =

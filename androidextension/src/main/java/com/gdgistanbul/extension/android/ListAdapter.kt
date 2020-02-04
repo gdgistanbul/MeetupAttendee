@@ -1,4 +1,4 @@
-package com.gdgistanbul.recyclerviewdsl
+package com.gdgistanbul.extension.android
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -12,14 +12,9 @@ import kotlinx.android.extensions.LayoutContainer
 
 fun <T : Any> listAdapter(
     @LayoutRes layoutRes: Int,
-    diffCallback: DiffUtil.ItemCallback<T>,
+    diffCallback: DiffUtil.ItemCallback<T> = defaultDiffCallback(),
     viewHolderBlock: ListAdapterViewHolder<T>.() -> Unit
 ) = BaseListAdapter(layoutRes, diffCallback, viewHolderBlock)
-
-fun <T : Any> listAdapter(
-    @LayoutRes layoutRes: Int,
-    viewHolderBlock: ListAdapterViewHolder<T>.() -> Unit
-) = BaseListAdapter(layoutRes, defaultDiffCallback(), viewHolderBlock)
 
 private fun <T> defaultDiffCallback() = object : DiffUtil.ItemCallback<T>() {
     override fun areItemsTheSame(oldItem: T, newItem: T) = oldItem == newItem
