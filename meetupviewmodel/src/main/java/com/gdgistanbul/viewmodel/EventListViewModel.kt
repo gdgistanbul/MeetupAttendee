@@ -10,7 +10,9 @@ import com.gdgistanbul.attendence.extension.classTag
 import com.gdgistanbul.model.EventStatus
 import com.gdgistanbul.model.Member
 import com.gdgistanbul.repo.MeetupRepo
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import com.gdgistanbul.model.Event as EventModel
 
 class EventListViewModel(private val meetupRepo: MeetupRepo) : ViewModel() {
@@ -38,20 +40,14 @@ class EventListViewModel(private val meetupRepo: MeetupRepo) : ViewModel() {
         }
 
     init {
-        viewModelScope.launch {
-            try {
-                coroutineScope {
-                    listOf(
-                        async { _memberLiveData.value = meetupRepo.getSelf() },
-                        async { upcomingEvents = meetupRepo.getEvents() },
-                        async { pastEvents = meetupRepo.getPastEvents() }
-                    ).awaitAll()
-                }
-                updateEvents()
-            } catch (e: Exception) {
-                _toastLiveData.value = Event(e.message.toString())
-                Log.d(classTag, e.message, e)
-            }
+        async { _memberLiveData.value = meetupRepo.getSelf() }
+        async {
+            upcomingEvents = meetupRepo.getEvents()
+            updateEvents()
+        }
+        async {
+            pastEvents = meetupRepo.getPastEvents()
+            updateEvents()
         }
     }
 
@@ -67,5 +63,16 @@ class EventListViewModel(private val meetupRepo: MeetupRepo) : ViewModel() {
         }
 
         _eventsLiveData.value = eventList
+    }
+
+    private fun async(block: suspend () -> Unit) {
+        viewModelScope.launch {
+            try {
+                block()
+            } catch (e: Exception) {
+                _toastLiveData.value = Event(e.message.toString())
+                Log.d(classTag, e.message, e)
+            }
+        }
     }
 }
