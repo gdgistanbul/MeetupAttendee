@@ -11,20 +11,14 @@ class RequestInterceptor(
     private val moshi: Moshi
 ) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
-        val login = sharedPreferences.getString("login", null)?.let { json ->
+        val accessToken = sharedPreferences.getString("login", null)?.let { json ->
             moshi.loginAdapter().fromJson(json)
-        } ?: return chain.proceed(chain.request())
+        }?.accessToken ?: return chain.proceed(chain.request())
 
-        val originalRequest = chain.request()
-
-        val headers = originalRequest.headers().newBuilder()
-            .add("Authorization", "Bearer ${login.accessToken}")
+        val newRequest = chain.request().newBuilder()
+            .header("Authorization", "Bearer $accessToken")
             .build()
 
-        val request = originalRequest.newBuilder()
-            .headers(headers)
-            .build()
-
-        return chain.proceed(request)
+        return chain.proceed(newRequest)
     }
 }
