@@ -6,6 +6,7 @@ import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.gdgistanbul.api.MeetupApi
 import com.gdgistanbul.api.MeetupSecureApi
 import com.gdgistanbul.api.authenticator.RequestInterceptor
+import com.gdgistanbul.api.authenticator.TokenAuthenticator
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -22,6 +23,7 @@ val meetupApiModule = module {
 
     single {
         OkHttpClient.Builder()
+            .authenticator(get<TokenAuthenticator>())
             .addInterceptor(get<RequestInterceptor>())
             .addNetworkInterceptor(StethoInterceptor())
             .build()
@@ -34,6 +36,10 @@ val meetupApiModule = module {
             .build()
 
         retrofit.create<MeetupApi>()
+    }
+
+    single {
+        TokenAuthenticator(get(), get(), get())
     }
 
     single {
