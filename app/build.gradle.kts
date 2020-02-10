@@ -22,6 +22,15 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+androidExtensions {
+    isExperimental = true
 }
 
 dependencies {
@@ -43,10 +52,15 @@ dependencies {
     implementation(AndroidxLibraries.navigationUI)
     implementation(AndroidxLibraries.navigationFragment)
 
+    implementation(ThirdPartyLibraries.coil)
+
     // Testing
     testImplementation(TestLibraries.jUnit)
     androidTestImplementation(TestLibraries.runnner)
     androidTestImplementation(TestLibraries.espressoCore)
+
+    // Debug
+    implementation(DebugLibraries.stetho)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

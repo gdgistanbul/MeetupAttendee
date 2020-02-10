@@ -4,5 +4,10 @@
     <color name="lipstick_light">#ff5c61</color>
     <color name="lipstick_dark">#ab0011</color>
     <color name="dusk">#3f3d56</color>
-    <color name="lynch">#60688a</color>
+    <color name="blue_grey">#60688a</color>
+    <color name="dark_grey_blue">#262e52</color>
+    <color name="metallic_blue">#4f7b8e</color>
+    <color name="metallic_blue_alpha_50">#804f7b8e</color>
+    <color name="metallic_blue_alpha_15">#264f7b8e</color>
+
 </resources>

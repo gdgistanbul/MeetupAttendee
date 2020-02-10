@@ -27,9 +27,10 @@ object Versions {
     const val jUnitVersion = "4.13"
     const val testRunnerVersion = "1.0.2"
     const val espressoCoreVersion = "3.0.2"
-    const val coinVersion = "2.0.1"
+    const val koinVersion = "2.0.1"
     const val moshiVersion = "1.8.0"
     const val navigationVersion = "2.1.0"
     const val versionsPluginVersion ="0.27.0"
     const val materialVersion = "1.2.0-alpha03"
+    const val stethoVersion = "1.5.1"
 }

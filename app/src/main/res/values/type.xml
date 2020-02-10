@@ -74,7 +74,7 @@
     </style>
 
     <style name="TextAppearance.MeetupAttendee.Body3" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">0</item>
     </style>
 
@@ -96,6 +96,16 @@
 
     <style name="TextAppearance.MeetupAttendee.Overline" parent="TextAppearance.MaterialComponents.Overline">
         <!--Your custom type style here-->
+    </style>
+
+    <style name="TextAppearance.MeetupAttendee.EditText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/nunito_bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.MeetupAttendee.TabLayout" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/nunito_extrabold</item>
+        <item name="android:letterSpacing">0</item>
     </style>
 
 </resources>

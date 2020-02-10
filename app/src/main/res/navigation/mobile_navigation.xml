@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_user_list">
         <argument
             android:name="eventID"
-            app:argType="integer" />
+            app:argType="string" />
     </fragment>
 
     <fragment

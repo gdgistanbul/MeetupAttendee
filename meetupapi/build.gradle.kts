@@ -14,6 +14,7 @@ dependencies {
     implementation(ThirdPartyLibraries.moshi)
     implementation(ThirdPartyLibraries.moshiConverter)
     implementation(AndroidxLibraries.security)
+    implementation(DebugLibraries.stethoOkhttp3)
 }
 android {
     compileSdkVersion(Versions.compileSdkVersion)

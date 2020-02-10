@@ -6,6 +6,7 @@ import com.gdgistanbul.api.MeetupSecureApi
 import com.gdgistanbul.api.Secrets
 import com.gdgistanbul.extension.loginAdapter
 import com.gdgistanbul.model.Event
+import com.gdgistanbul.model.Member
 import com.squareup.moshi.Moshi
 
 class MeetupRepo(
@@ -16,6 +17,7 @@ class MeetupRepo(
 ) {
     suspend fun getEvents(): List<Event> = meetupApi.getEvents()
 
+    suspend fun getPastEvents(): List<Event> = meetupApi.getEvents(status = "past")
 
     suspend fun authenticate(code: String) {
         val login = meetupSecureApi.getAccessToken(
@@ -27,4 +29,8 @@ class MeetupRepo(
         )
         sharedPreferences.edit().putString("login", moshi.loginAdapter().toJson(login)).apply()
     }
+
+    suspend fun getSelf(): Member = meetupApi.getMember()
+
+    suspend fun getMember(id: Int): Member = meetupApi.getMember(id.toString())
 }

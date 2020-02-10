@@ -30,5 +30,21 @@
     <style name="Widget.MeetupAttendee.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:padding">@dimen/button_padding</item>
     </style>
-    
+
+    <!--EditText-->
+    <style name="Widget.MeetupAttendee.EditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/TextAppearance.MeetupAttendee.EditText
+        </item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--TabLayout-->
+    <style name="Widget.MeetupAttendee.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabBackground">@drawable/tab_indicator</item>
+        <item name="tabIndicatorHeight">@dimen/tab_indicator_height</item>
+        <item name="tabSelectedTextColor">?colorSecondary</item>
+        <item name="tabTextColor">?tabLayoutUnselectedTextColor</item>
+        <item name="tabTextAppearance">@style/TextAppearance.MeetupAttendee.TabLayout</item>
+    </style>
+
 </resources>

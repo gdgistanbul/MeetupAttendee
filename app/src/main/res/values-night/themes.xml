@@ -9,7 +9,7 @@
         <item name="colorSecondaryVariant">@color/lipstick</item>
 
         <item name="android:colorBackground">@color/dusk</item>
-        <item name="colorSurface">@color/lynch</item>
+        <item name="colorSurface">@color/blue_grey</item>
         <item name="colorError">@color/lipstick_light</item>
 
         <item name="colorOnPrimary">@android:color/black</item>
@@ -17,6 +17,12 @@
         <item name="colorOnBackground">@android:color/white</item>
         <item name="colorOnSurface">@android:color/white</item>
         <item name="colorOnError">@android:color/black</item>
+
+        <item name="colorOnSurfaceVariant">@android:color/white</item>
+
+        <!--Custom color attributes -->
+        <item name="tabLayoutUnselectedTextColor">@color/metallic_blue_alpha_50</item>
+        <item name="tabLayoutUnselectedIndicatorColor">@color/metallic_blue_alpha_15</item>
 
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>

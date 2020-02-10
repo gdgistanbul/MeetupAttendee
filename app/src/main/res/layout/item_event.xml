@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/fragment_event_list">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eventInfoCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/layout_margin_xxxlarge"
+        android:layout_marginTop="@dimen/layout_margin_small"
+        android:layout_marginEnd="@dimen/layout_margin_medium"
+        android:layout_marginBottom="@dimen/layout_margin_small"
+        app:cardElevation="@dimen/event_item_info_card_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="277:122"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eventImageCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/layout_margin_medium"
+        android:layout_marginEnd="@dimen/layout_margin_small"
+        app:cardElevation="@dimen/event_item_others_elevation"
+        app:layout_constraintBottom_toBottomOf="@+id/eventInfoCardView"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eventInfoCardView">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/eventImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/eventNameTextView"
+        style="?textAppearanceSubtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        android:layout_marginEnd="@dimen/layout_margin_medium"
+        android:elevation="@dimen/event_item_others_elevation"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="?colorOnSurface"
+        app:layout_constraintBottom_toTopOf="@+id/eventDateTextView"
+        app:layout_constraintEnd_toEndOf="@id/eventInfoCardView"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/eventInfoCardView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="DevFest Istanbul 2019" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/eventDateTextView"
+        style="@style/TextAppearance.MeetupAttendee.Body3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        android:layout_marginTop="@dimen/layout_margin_xsmall"
+        android:layout_marginEnd="@dimen/layout_margin_medium"
+        android:elevation="@dimen/event_item_others_elevation"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?colorOnSurfaceVariant"
+        app:layout_constraintBottom_toTopOf="@+id/eventLocationTextView"
+        app:layout_constraintEnd_toEndOf="@id/eventInfoCardView"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/eventNameTextView"
+        tools:text="24 Nov, 9am" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/eventLocationTextView"
+        style="@style/TextAppearance.MeetupAttendee.Body3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        android:layout_marginEnd="@dimen/layout_margin_medium"
+        android:elevation="@dimen/event_item_others_elevation"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?colorOnSurfaceVariant"
+        app:layout_constraintBottom_toBottomOf="@id/eventInfoCardView"
+        app:layout_constraintEnd_toEndOf="@id/eventInfoCardView"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/eventDateTextView"
+        tools:text="Uniq Istanbul" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

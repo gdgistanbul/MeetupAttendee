@@ -1,23 +1,23 @@
 object CoreLibraries {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
-
     const val coroutines =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
-    const val koin = "org.koin:koin-android:${Versions.coinVersion}"
-    const val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.coinVersion}"
+    const val koin = "org.koin:koin-android:${Versions.koinVersion}"
+    const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koinVersion}"
 }
-
 
 object ThirdPartyLibraries {
     const val retrofit = "com.squareup.retrofit2:retrofit:2.6.0"
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
     const val moshiapt = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
     const val moshiConverter = "com.squareup.retrofit2:converter-moshi:2.5.0"
+    const val coil = "io.coil-kt:coil:0.9.2"
 }
 
 object AndroidxLibraries {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompatVersion}"
     const val core = "androidx.core:core-ktx:${Versions.appCompatVersion}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.appCompatVersion}"
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
     const val lifecycleExtensions =
@@ -49,4 +49,9 @@ object TestLibraries {
     const val archCoreTesting = "android.arch.core:core-testing:1.0.0"
     const val coroutinesTesting =
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}"
+}
+
+object DebugLibraries {
+    const val stetho = "com.facebook.stetho:stetho:${Versions.stethoVersion}"
+    const val stethoOkhttp3 = "com.facebook.stetho:stetho-okhttp3:${Versions.stethoVersion}"
 }
